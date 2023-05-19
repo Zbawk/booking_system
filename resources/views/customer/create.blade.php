@@ -1,5 +1,5 @@
-@extends('layout');
-@section('content');
+@extends('layout')
+@section('content')
 <!-- Begin Page Content -->
     <div class="container-fluid">
 
