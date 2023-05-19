@@ -6,7 +6,7 @@
 ## database
 * run 'cp .env.example .env'
 * edit the .env file to 'booking_system'
-* create 'laravel' as db in php my admin
+* create 'booking_system' as db in php my admin
 * run 'php artisan migrate'
 
 ## for the app key
