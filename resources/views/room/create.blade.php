@@ -1,5 +1,5 @@
-@extends('layout');
-@section('content');
+@extends('layout')
+@section('content')
 <!-- Begin Page Content -->
     <div class="container-fluid">
 
@@ -26,21 +26,21 @@
                                                     @foreach($roomtypes as $rt)
                                                     <option value="{{$rt->id}}"> {{$rt->title}} </option>
                                                     @endforeach
-                                                </select> 
+                                                </select>
                                             </td>
                                     </tr>
-                            
+
                                     <tr>
                                         <th>Title</th>
                                         <td><input name="title" type="text" class="form-control"></td>
                                     </tr>
-                                 
+
                                     <tr>
                                         <td colspan="2">
                                             <input type="submit" class="btn btn-primary"/>
                                         </td>
                                     </tr>
-                                
+
                             </table>
                         </form>
                    </div>
@@ -48,4 +48,4 @@
            </div>
 
     </div>
-@endsection 
+@endsection

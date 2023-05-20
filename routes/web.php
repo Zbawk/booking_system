@@ -1,8 +1,8 @@
 <?php
 
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\RoomtypeController;
 use App\Http\Controllers\RoomController;
-use app\Http\Controllers\CustomerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/auth', function () {
+    return view('authentication');
+});
+
 Route::get('/', function () {
     return view('home');
 });
@@ -26,13 +30,14 @@ Route::get('admin', function () {
 });
 
 //Roomtype route
-Route::get('admin/roomtype/{id}/delete', [RoomtypeController::class,'destroy']);
+Route::get('admin/roomtype/{id}/delete', [RoomtypeController::class, 'destroy']);
 Route::resource('admin/roomtype', RoomtypeController::class);
 
 //Room route
-Route::get('admin/room/{id}/delete', [RoomController::class,'destroy']);
+Route::get('admin/room/{id}/delete', [RoomController::class, 'destroy']);
 Route::resource('admin/room', RoomController::class);
 
-//Customer route
-Route::get('admin/customer/{id}/delete', [CustomerController::class,'destroy']);
-Route::resource('admin/customer', CustomerController::class);
+// Customer route
+Route::get('admin/customer/{id}/delete', [CustomerController::class, 'destroy']);
+Route::get('admin/customer', [CustomerController::class, 'index']);
+Route::resource('admin/customer', CustomerController::class,);
