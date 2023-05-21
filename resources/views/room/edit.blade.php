@@ -1,5 +1,5 @@
-@extends('layout');
-@section('content');
+@extends('layout')
+@section('content')
 <!-- Begin Page Content -->
     <div class="container-fluid">
 
@@ -24,11 +24,11 @@
                                             <td>
                                                 <select name="rt_id" class="form-control">
                                                     <option value="0">--- Select ---</option>
-                                                    
+
                                                     @foreach($roomtypes as $rt)
                                                   <option @if($data->room_type_id==$rt->id) selected @endif  value="{{$rt->id}}"> {{$rt->title}} </option>
                                                     @endforeach
-                                                </select> 
+                                                </select>
                                             </td>
                                     </tr>
                                     <tr>
@@ -40,7 +40,7 @@
                                             <input type="submit" class="btn btn-primary"/>
                                         </td>
                                     </tr>
-                                
+
                             </table>
                         </form>
                    </div>
@@ -48,4 +48,4 @@
            </div>
 
     </div>
-@endsection 
+@endsection

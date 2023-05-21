@@ -8,7 +8,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>PD Entertainment</title>
+    <title>PD Entertainment Mw</title>
+
+    <link rel="shortcut icon" href="{{asset('assets/images/PD.jpg')}}" type="image/x-icon">
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('public/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -316,14 +318,9 @@
 
                 </nav>
                 <!-- End of Topbar -->
-                @yield('content')
+
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
-
-                </div>
+                @yield('content')
                 <!-- /.container-fluid -->
 
             </div>

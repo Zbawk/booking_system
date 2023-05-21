@@ -1,10 +1,10 @@
- @extends('layout');
- @section('content');
+ @extends('layout')
+ @section('content')
  <!-- Begin Page Content -->
       <div class="container-fluid">
 
             <!-- Page Heading -->
- 
+
 
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
@@ -66,6 +66,6 @@
 
     <!-- Page level custom scripts -->
     <script src="{{asset('public')}}/js/demo/datatables-demo.js"></script>
-@endsection 
+@endsection
 
-@endsection 
+@endsection
