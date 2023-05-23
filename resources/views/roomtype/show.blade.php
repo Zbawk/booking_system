@@ -1,5 +1,5 @@
-@extends('layout');
-@section('content');
+@extends('layout')
+@section('content')
 <!-- Begin Page Content -->
     <div class="container-fluid">
 
@@ -22,12 +22,12 @@
                                         <th>Detail</th>
                                         <td>{{$data->detail}}</td>
                                     </tr>
-                                                                   
+
                             </table>
-                       
+
                    </div>
                </div>
            </div>
 
     </div>
-@endsection 
+@endsection

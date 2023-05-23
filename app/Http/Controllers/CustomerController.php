@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use app\Models\Customer;
 
+
+
 class CustomerController extends Controller
 {
     /**
@@ -14,8 +16,8 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        $data=Customer::all();
-        return view('Customer.index',['data'=>$data]);
+        $data = Customer::all();
+        return view('Customer.index');
     }
 
     /**
@@ -36,12 +38,12 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
-        $data=new Customer;
-        $data->title=$request->title;
-        $data->detail=$request->detail;
+        $data = new Customer;
+        $data->title = $request->title;
+        $data->detail = $request->detail;
         $data->save();
 
-        return redirect('admin/Customer/create')->with('success','Data has been added.');
+        return redirect('admin/Customer/create')->with('success', 'Data has been added.');
     }
 
     /**
@@ -52,8 +54,8 @@ class CustomerController extends Controller
      */
     public function show($id)
     {
-        $data=Customer::find($id);
-        return view('Customer.show',['data'=>$data]);
+        $data = Customer::find($id);
+        return view('Customer.show', ['data' => $data]);
     }
 
     /**
@@ -64,10 +66,9 @@ class CustomerController extends Controller
      */
     public function edit($id)
     {
-    
-        $data=Customer::find($id);
-        return view('Customer.edit',['data'=>$data]);
 
+        $data = Customer::find($id);
+        return view('Customer.edit', ['data' => $data]);
     }
 
     /**
@@ -79,14 +80,14 @@ class CustomerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data=Customer::find($id);
-        $data->title=$request->title;
-        $data->detail=$request->detail;
+        $data = Customer::find($id);
+        $data->title = $request->title;
+        $data->detail = $request->detail;
         $data->save();
-      
-        $data=Customer::find($id);
-        return view('Customer.edit',['data'=>$data]);
-        return redirect('admin/Customer/'.$id.'/edit')->with('success','Data has been Updated Successifully.');
+
+        $data = Customer::find($id);
+        return view('Customer.edit', ['data' => $data]);
+        return redirect('admin/Customer/' . $id . '/edit')->with('success', 'Data has been Updated Successifully.');
     }
     /**
      * Remove the specified resource from storage.
@@ -96,7 +97,7 @@ class CustomerController extends Controller
      */
     public function destroy($id)
     {
-        Customer::where('id',$id)->delete();
-        return redirect('admin/Customer')->with('success','Data has been deleted Successifully.');
+        Customer::where('id', $id)->delete();
+        return redirect('admin/Customer')->with('success', 'Data has been deleted Successifully.');
     }
 }

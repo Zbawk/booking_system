@@ -1,5 +1,5 @@
-@extends('layout');
-@section('content');
+@extends('layout')
+@section('content')
 <!-- Begin Page Content -->
     <div class="container-fluid">
 
@@ -32,7 +32,7 @@
                                             <input type="submit" class="btn btn-primary"/>
                                         </td>
                                     </tr>
-                                
+
                             </table>
                         </form>
                    </div>
@@ -40,4 +40,4 @@
            </div>
 
     </div>
-@endsection 
+@endsection
