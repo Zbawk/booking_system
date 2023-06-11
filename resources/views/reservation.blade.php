@@ -1,5 +1,12 @@
 <!DOCTYPE html>
   <head>
+    <meta charset="utf-8">
+    <title>Home page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+
 
     <link rel="stylesheet" href="{{asset('bs5/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('public')}}/css/animate.css">
@@ -21,7 +28,7 @@
       <div class="container-fluid">
         <div class="row align-items-center">
           <div class="col-6 col-lg-4 site-logo" data-aos="fade"><a href="index.html">
-            <img src="{{asset('public')}}/img/pd_3.png" style="height:45px; width:15%"/></a>
+            <img src="{{asset('public')}}/img/Logo.png" style="height:45px; width:15%"/></a>
           </div>
           <div class="col-6 col-lg-8">
 
@@ -56,11 +63,11 @@
     </header>
     <!-- END head -->
 
-    <section class="site-hero overlay" style="background-image: url({{asset('public')}}/images/wed_3.jpg)" data-stellar-background-ratio="0.5">
+    <section class="site-hero overlay" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row site-hero-inner justify-content-center align-items-center">
           <div class="col-md-10 text-center" data-aos="fade-up">
-            <span class="custom-caption text-uppercase text-white d-block  mb-3">Welcome To 5 <span class="fa fa-star text-primary"></span>  Entertainer</span>
+            <span class="custom-caption text-uppercase text-white d-block  mb-3">Welcome To YOUR 5 <span class="fa fa-star text-primary"></span>  Entertainer</span>
             <h1 class="heading">Best Choice For Entertainment</h1>
           </div>
         </div>
@@ -219,7 +226,7 @@
               <h2 class="text-white font-weight-bold">Consider your special day. Reserve Now!</h2>
             </div>
             <div class="col-12 col-md-6 text-center text-md-right" data-aos="fade-up" data-aos-delay="200">
-              <a href="reservation.html" class="btn btn-outline-white-primary py-3 text-white px-5">Reserve Now</a>
+              <a href="{{url('reservation')}}" class="btn btn-outline-white-primary py-3 text-white px-5">Reserve Now</a>
             </div>
           </div>
         </div>
